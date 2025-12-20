@@ -59,8 +59,8 @@ p {
   position: fixed;
   top: -22%;
   left: -1.75%;
-  left: 50%;             /* center horizontally */
-  transform: translateX(-50%); /* move back by half its width to truly center */
+  left: 50%;             
+  transform: translateX(-50%);
   text-align: center;
 }
 
