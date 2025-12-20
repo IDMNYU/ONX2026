@@ -1,0 +1,166 @@
+body {
+  color: #F28123;
+  font-family: 'DM Sans', sans-serif;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+
+  background-image: linear-gradient(to bottom, white, #F7F052);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#more {
+  display: none;
+}
+
+#trigger {
+  font-size: 12pt;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #F28123;
+}
+
+h1 {
+  text-align: center;
+  font-size: 13vw;
+  font-weight: 1000;
+}
+
+h2 {
+  font-size: 36pt;
+  font-weight: 100;
+  margin: 0;
+}
+
+h3 {
+  font-size: 14pt;
+  font-weight: 300;
+  margin: 0 0 0.25rem 0;
+}
+
+h4 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0rem;
+  font-weight: 300;
+}
+
+p {
+  font-size: 10pt;
+  font-weight: 300;
+  margin: 0;
+}
+
+.title {
+  position: fixed;
+  top: -22%;
+  left: -1.75%;
+  left: 50%;             /* center horizontally */
+  transform: translateX(-50%); /* move back by half its width to truly center */
+  text-align: center;
+}
+
+.heading {
+  position: fixed;
+  margin-top: 200px;
+  margin-left: 2.5%;
+  max-width: 400px;
+  text-align: left;
+}
+
+.content {
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 45%;
+  width: 50%;
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.events section {
+  margin-bottom: 3rem;
+}
+
+.event {
+  position: relative;
+  padding: 1rem 0rem;
+  cursor: pointer;
+}
+
+.event-info {
+  position: relative;
+  z-index: 2;
+}
+
+.meta {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+/* next event */
+
+.events-next h3 {
+  font-size: 1.4rem;
+}
+
+.events-next .meta {
+  font-size: 1rem;
+}
+
+/* Hover image layer */
+.event img {
+  position: absolute;
+  top: -50%;
+  left: 45%;
+  width: 150px;
+
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  transition: opacity 0.2s ease;
+}
+
+.event:hover img {
+  opacity: 1;
+}
+
+.event:hover h3 {
+  text-decoration: underline;
+}
+
+/* Past / archive */
+.event.past,
+.events-archive .event {
+  opacity: 0.6;
+}
+
+.events-archive .event:hover {
+  opacity: 1;
+}
+
+.btm-bar {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  z-index: 10;
+}
+
+.btm-bar img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+}
