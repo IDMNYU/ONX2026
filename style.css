@@ -2,11 +2,16 @@
   box-sizing: border-box;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   color: #F28123;
   font-family: 'DM Sans', sans-serif;
   width: 100%;
-  height: 100vh;
+  min-height: 100svh;
   overflow-x: hidden;
 
   background-image: linear-gradient(to bottom, white, #F7F052);
@@ -62,7 +67,7 @@ p {
 .title {
   letter-spacing: -0.30rem;
   position: fixed;
-  top: -23%;
+  top: -22%;
   left: 50%;             
   transform: translateX(-50%);
   text-align: center;
@@ -210,11 +215,13 @@ p {
   /* reset the layout of the page */
   html, body {
     overflow-x: hidden;
+    overscroll-behavior: none;
     width: 100%;
   }
 
   body {
     height: auto;
+    min-height: 100svh;
     background-attachment: scroll;
   }
 
@@ -228,13 +235,17 @@ p {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 110vw;
+
+    width: 100%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-top: -5vw;
+
     text-align: center;
     line-height: 0.9;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -5vw;
     font-weight: 1000;
   }
 
@@ -294,6 +305,10 @@ p {
 
   .event {
     padding: 1rem 0;
+  }
+
+  .event img {
+    display: none !important;
   }
 
   .desc {
